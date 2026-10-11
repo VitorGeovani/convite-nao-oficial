@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8ef">
+  <meta name="description" content="Um convite para um encontro com boas opções e zero pressão.">
+  <title>Convite oficialmente não-oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <span class="brand-name">convite não-oficial™</span>
+      <span class="top-note">sem pressão, só carinho</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <!-- <p class="eyebrow">documento importante · versão 1.0</p> -->
+        <h1 id="page-title">Você topa sair<br><em>comigo?</em></h1>
+        <p class="hero-description">Prometo conversa boa, risadas questionáveis e a chance de criar uma memória melhor que qualquer série.</p>
+        <div class="hero-stamp">validade: enquanto for divertido</div>
+      </div>
+      <div class="hero-doodle" aria-hidden="true">
+        <img class="romantic-penguin" src="pinguim-romantico.png" alt="Pinguim segurando flores vermelhas">
+      </div>
+    </section>
+
+    <section class="invite-card" aria-labelledby="form-title">
+      <div class="card-heading">
+        <div>
+          <p class="section-kicker">sua decisão, seu ritmo</p>
+          <h2 id="form-title">Vamos combinar?</h2>
+        </div>
+        <span class="card-number">01 / 03</span>
+      </div>
+
+      <div class="choice-block">
+        <div class="choice-label-row">
+          <label>Primeiro de tudo...</label>
+          <span class="required-note">obrigatório</span>
+        </div>
+        <div class="answer-grid" role="group" aria-label="Aceita sair comigo?">
+          <button class="answer-option selected" type="button" data-answer="sim" aria-pressed="true">
+            <span class="option-icon">♡</span>
+            <span><strong>Sim, bora!</strong><small>já estou pensando no look</small></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="planning-fields" class="planning-fields">
+        <div class="form-section-title"><span>02</span><h3>Agora os detalhes gostosos</h3></div>
+
+        <fieldset class="choice-block">
+          <legend>Onde seria uma boa?</legend>
+          <div class="place-grid">
+            <button class="place-option selected" type="button" data-place="Café aconchegante" aria-pressed="true"><span>☕</span><strong>Café aconchegante</strong><small>para conversar por horas</small></button>
+            <button class="place-option" type="button" data-place="Jantar gostoso" aria-pressed="false"><span>🍝</span><strong>Jantar gostoso</strong><small>com direito a sobremesa</small></button>
+            <button class="place-option" type="button" data-place="Passeio ao ar livre" aria-pressed="false"><span>🌿</span><strong>Passeio ao ar livre</strong><small>clima de filme indie</small></button>
+            <button class="place-option" type="button" data-place="Você escolhe" aria-pressed="false"><span>✨</span><strong>Você escolhe</strong><small>eu acompanho feliz</small></button>
+          </div>
+        </fieldset>
+
+        <div class="details-grid">
+          <div class="input-wrap">
+            <label for="date">Qual dia funciona?</label>
+            <input id="date" type="date">
+          </div>
+          <div class="input-wrap">
+            <label for="time">E que horas?</label>
+            <input id="time" type="time" value="19:00">
+          </div>
+        </div>
+
+        <div class="input-wrap message-wrap">
+          <label for="message">Algum detalhe importante? <span>(opcional)</span></label>
+          <textarea id="message" rows="2" maxlength="140" placeholder="Ex.: sem picles, por favor. Ou: estou ansiosa!"></textarea>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <p class="privacy-note"><span>🔒</span> Nada sai deste navegador. É só entre nós.</p>
+        <button id="confirm-button" class="confirm-button" type="button">Fechar esse encontro <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="meme-strip" aria-label="Momento meme">
+      <div class="meme-label">meme de incentivo</div>
+      <div class="meme-content"><span class="meme-emoji">🧠</span><p id="meme-text">meu cérebro depois de você aceitar: <strong>stonks</strong></p><button id="meme-button" type="button" title="Trocar meme" aria-label="Trocar meme">↻</button></div>
+    </section>
+
+    <footer><span>feito com coragem e um pouco de vergonha alheia</span><span>♡</span></footer>
+  </main>
+
+  <div id="success-modal" class="modal-backdrop" hidden>
+    <section class="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+      <button id="close-modal" class="close-modal" type="button" aria-label="Fechar">×</button>
+      <div class="success-confetti" aria-hidden="true">✦　♡　✦</div>
+      <p class="section-kicker">protocolo aprovado</p>
+      <h2 id="success-title">Temos um encontro!</h2>
+      <p class="success-lead">A parte mais difícil foi criar coragem. Agora falta só viver a parte boa:</p>
+      <div id="summary" class="summary-box"></div>
+      <button id="copy-button" class="copy-button" type="button">Copiar o combinado <span>⧉</span></button>
+      <p id="copy-status" class="copy-status" aria-live="polite">Os detalhes serão enviados automaticamente.</p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
